@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sangchpa <sangchpa@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/12/30 15:01:01 by sangchpa          #+#    #+#             */
+/*   Updated: 2020/12/31 18:06:13 by sangchpa         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-void *ft_calloc(size_t count, size_t size)
+void    *ft_calloc(size_t count, size_t size)
 {
-    void *p;
+    void    *p;
 
     p = malloc(count * size);
     if (p == 0)
@@ -10,5 +22,4 @@ void *ft_calloc(size_t count, size_t size)
 
     ft_bzero (p,count * size);
     return(p);
-
 }

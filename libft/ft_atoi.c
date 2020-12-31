@@ -6,7 +6,7 @@
 /*   By: sangchpa <sangchpa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/30 14:46:57 by sangchpa          #+#    #+#             */
-/*   Updated: 2020/12/30 15:00:55 by sangchpa         ###   ########.fr       */
+/*   Updated: 2020/12/31 18:05:06 by sangchpa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,5 @@ int ft_atoi(const char *str)
         val = (val * 10) + (str[i] - '0'); 
         i++;
     }
-    return (state *val);
+    return (state * val);
 }

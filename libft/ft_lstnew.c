@@ -6,7 +6,7 @@
 /*   By: sangchpa <sangchpa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/30 15:02:17 by sangchpa          #+#    #+#             */
-/*   Updated: 2020/12/30 18:44:10 by sangchpa         ###   ########.fr       */
+/*   Updated: 2020/12/31 17:32:42 by sangchpa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,6 @@ t_list *ft_lstnew(void *content)
     p->content = content;
     p->next = 0;
     return (p);
-    
-    
 }
 /*
 Function name | ft_lstnew

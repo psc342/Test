@@ -6,7 +6,7 @@
 /*   By: sangchpa <sangchpa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/30 15:03:52 by sangchpa          #+#    #+#             */
-/*   Updated: 2020/12/30 16:19:32 by sangchpa         ###   ########.fr       */
+/*   Updated: 2020/12/31 17:32:25 by sangchpa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,28 +26,8 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 	ft_strlcpy(p, s + start, len+1);
 	return (p);
 }
+
 /*
-{
-    char *p;
-    size_t s_len;
-    size_t i;
-
-    if (s == 0)
-        return (0);
-    i = 0;
-    s_len = ft_strlen(s);
-    if (s_len < start)
-        return (0);
-    if (s_len + start < len)
-		len = s_len + start;
-    p = (char *)malloc(sizeof(char) * (s_len + 1));
-    if (p == 0)
-        return (0);
-    ft_strlcpy(p, s+start, len+1);
-    return (p);
-}
-
-
 Parameters | 
 #1. 하위 문자열을 만들 문자열. 
 #2. 문자열 's'에 있는 하위 문자열의 시작 인덱스. 
