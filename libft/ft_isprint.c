@@ -6,16 +6,16 @@
 /*   By: sangchpa <sangchpa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/30 15:01:35 by sangchpa          #+#    #+#             */
-/*   Updated: 2020/12/31 17:33:14 by sangchpa         ###   ########.fr       */
+/*   Updated: 2020/12/31 18:46:24 by sangchpa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
-    if (c >= 32 && c <= 126)
-        return (1);
-    else
-        return (0);
+	if (c >= 32 && c <= 126)
+		return (1);
+	else
+		return (0);
 }
