@@ -6,13 +6,13 @@
 /*   By: sangchpa <sangchpa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/30 15:02:12 by sangchpa          #+#    #+#             */
-/*   Updated: 2020/12/31 17:32:34 by sangchpa         ###   ########.fr       */
+/*   Updated: 2021/01/01 08:53:29 by sangchpa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*result;
 	t_list	*temp;
@@ -34,6 +34,7 @@ t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	}
 	return (result);
 }
+
 /*
 Function name | ft_lstmap
 Prototype | t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));

@@ -6,15 +6,15 @@
 /*   By: sangchpa <sangchpa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/30 15:03:56 by sangchpa          #+#    #+#             */
-/*   Updated: 2020/12/31 17:32:59 by sangchpa         ###   ########.fr       */
+/*   Updated: 2021/01/01 11:14:05 by sangchpa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
-    if (c >= 'A' && c <= 'Z')
-        c = c + 32;
-    return (c);
+	if (c >= 'A' && c <= 'Z')
+		c = c + 32;
+	return (c);
 }

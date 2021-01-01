@@ -6,7 +6,7 @@
 /*   By: sangchpa <sangchpa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/30 15:03:03 by sangchpa          #+#    #+#             */
-/*   Updated: 2020/12/31 17:32:56 by sangchpa         ###   ########.fr       */
+/*   Updated: 2021/01/01 08:59:59 by sangchpa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,11 @@ void	ft_putstr_fd(char *s, int fd)
 {
 	if (s == 0 || fd < 0)
 		return (void)0;
-    while (*s != '\0')
-    {
-        write(fd, s, 1);
-        s++;
-    }
+	while (*s != '\0')
+	{
+		write(fd, s, 1);
+		s++;
+	}
 }
 /*
 Parameters | #1. 출력할 문자열. #2. 쓰여질 파일디스크립터.

@@ -6,43 +6,43 @@
 /*   By: sangchpa <sangchpa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/30 15:03:47 by sangchpa          #+#    #+#             */
-/*   Updated: 2020/12/31 17:31:41 by sangchpa         ###   ########.fr       */
+/*   Updated: 2021/01/01 11:12:49 by sangchpa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-    char *p;
-    int i;
-    int j;
-    int k;
-    int count;
+	char	*p;
+	int		i;
+	int		j;
+	int		k;
+	int		count;
 
-    i = 0;
-    k = 0;
-    p = (char *)malloc(sizeof(char) * (ft_strlen(s1) + 1));
-    if (p == 0)
-        return (0);
-    while(s1[i] != '\0')
-    {
-        j = 0;
-        count = 0;
-        while (set[j] != '\0')
-        {
-            if(s1[i] == set[j])
-                count++;
-            j++;
-        }
-        if (count == 0)
-        {
-            p[k] = s1[i]; 
-            k++;
-        }
-        i++;
-    }
-    return (p);
+	i = 0;
+	k = 0;
+	p = (char *)malloc(sizeof(char) * (ft_strlen(s1) + 1));
+	if (p == 0)
+		return (0);
+	while(s1[i] != '\0')
+	{
+		j = 0;
+		count = 0;
+		while (set[j] != '\0')
+		{
+			if(s1[i] == set[j])
+				count++;
+			j++;
+		}
+		if (count == 0)
+		{
+			p[k] = s1[i]; 
+			k++;
+		}
+		i++;
+	}
+	return (p);
 }
 
 

@@ -6,20 +6,20 @@
 /*   By: sangchpa <sangchpa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/30 15:03:29 by sangchpa          #+#    #+#             */
-/*   Updated: 2020/12/31 17:33:05 by sangchpa         ###   ########.fr       */
+/*   Updated: 2021/01/01 11:08:25 by sangchpa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t ft_strlen (const char *s)
+size_t	ft_strlen (const char *s)
 {
-    size_t len;
+	size_t	len;
 
-    len = 0;
-    while (s[len] != '\0')
-    {
-        len++;
-    }
-    return (len);
+	len = 0;
+	while (s[len] != '\0')
+	{
+		len++;
+	}
+	return (len);
 }

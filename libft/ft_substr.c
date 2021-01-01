@@ -6,27 +6,26 @@
 /*   By: sangchpa <sangchpa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/30 15:03:52 by sangchpa          #+#    #+#             */
-/*   Updated: 2020/12/31 17:32:25 by sangchpa         ###   ########.fr       */
+/*   Updated: 2021/01/01 11:13:36 by sangchpa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*p;
 
-    if (s == 0 || len == 0)
+	if (s == 0 || len == 0)
 		return (0);
 	if (ft_strlen(s) <= start)
 		return (ft_strdup(""));
 	p = (char *)malloc(sizeof(char) * (len + 1));
-    if (p == 0)
-        return (0);
+	if (p == 0)
+		return (0);
 	ft_strlcpy(p, s + start, len+1);
 	return (p);
 }
-
 /*
 Parameters | 
 #1. 하위 문자열을 만들 문자열. 
