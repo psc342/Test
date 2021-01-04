@@ -6,7 +6,7 @@
 /*   By: sangchpa <sangchpa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/30 15:02:46 by sangchpa          #+#    #+#             */
-/*   Updated: 2021/01/01 08:57:53 by sangchpa         ###   ########.fr       */
+/*   Updated: 2021/01/04 15:05:16 by sangchpa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,18 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	size_t	i;
+	size_t			i;
+	unsigned char	*b_cp;
+	unsigned char	c_cp;
+	
+	b_cp = (unsigned char *)b;
+	c_cp = (unsigned char)c;
     
 	i = 0;
 	while (i < len)
 	{
-		*((char*)b + i) = c;
+		b_cp[i] = c_cp;
 		i++;
 	}
 	return (b);
 }
-
-/*
-b: 채우고자 하는 메모리의 시작 포인터(시작 주소)
-c: 메모리에 채우고자하는 값. int형이지만 내부에서는 unsigned char(1 byte)로 변환되어서 저장된다.
-len: 채우고자 하는 바이트의 수. 즉, 채우고자 하는 메모리의 크기
-*/

@@ -6,7 +6,7 @@
 /*   By: sangchpa <sangchpa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/30 15:03:18 by sangchpa          #+#    #+#             */
-/*   Updated: 2021/01/01 11:05:45 by sangchpa         ###   ########.fr       */
+/*   Updated: 2021/01/04 15:08:38 by sangchpa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,23 +26,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (p == 0)
 		return (0);
 	ft_strlcpy(p, s1, s1_len + 1);
-	ft_strlcat(p + (s1_len), s2, s2_len + 1);
+	ft_strlcat((p + s1_len), s2, s2_len + 1);
 	return (p);
 }
-
-/*
-
-while(i < s1_len)
-        p[i++] = *s1++;
-    while(i < s1_len + s2_len)
-        p[i++] = *s2++;
-    p[i] = '\0';
-
-Parameters | 
-#1. 앞에 올 문자열. 
-#2. 뒤에 올 문자열.
-Return value | 새로운 문자열. 할당 실패시 NULL.
-External functs. | malloc
-Description | malloc(3)을 할당하고 새로운 문자열을 반환.
- 새로운 문자열은 문자열 's1'과 문자열 's2'의 연결된 형태.
-*/

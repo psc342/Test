@@ -6,7 +6,7 @@
 /*   By: sangchpa <sangchpa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/30 15:03:43 by sangchpa          #+#    #+#             */
-/*   Updated: 2021/01/01 11:11:33 by sangchpa         ###   ########.fr       */
+/*   Updated: 2021/01/04 11:40:53 by sangchpa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ char	*ft_strrchr(const char *s, int c)
 	int	len;
 
 	len = ft_strlen(s);
-
 	while(0 <= len)
 	{
 		if (s[len] == (unsigned char)c)

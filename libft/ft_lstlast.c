@@ -6,7 +6,7 @@
 /*   By: sangchpa <sangchpa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/30 15:02:08 by sangchpa          #+#    #+#             */
-/*   Updated: 2021/01/01 08:52:41 by sangchpa         ###   ########.fr       */
+/*   Updated: 2021/01/04 15:04:17 by sangchpa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,3 @@ t_list	*ft_lstlast(t_list *lst)
 		lst = lst->next;
 	return (lst);
 }
-/*
-Function name | ft_lstlast
-Prototype | t_list *ft_lstlast(t_list *lst);
-Turn in files | -
-Parameters | #1. 리스트의 시작
-Return value | 리스트의 마지막 요소.
-External functs. | None
-Description | 리스트의 마지막 요소를 반환.
-*/

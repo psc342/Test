@@ -6,14 +6,45 @@
 /*   By: sangchpa <sangchpa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/30 15:03:07 by sangchpa          #+#    #+#             */
-/*   Updated: 2021/01/01 09:05:19 by sangchpa         ###   ########.fr       */
+/*   Updated: 2021/01/04 15:06:05 by sangchpa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+int	ft_str_size(char const *s, char c)
+{
+	int		i;
+	int		size;
 
-char	**allocate(char **ptr, int count_str, char *str, char c)
+	i = 0;
+	size = 0;
+	while (s[i] != '\0')
+	{
+		if (s[i] != c)
+		{
+			while (s[i] != c && s[i] != '\0')
+				i++;
+			size++;
+		}
+		else
+			i++;
+	}
+	return (size);
+}
+
+void	ft_free(char **p, int j)
+{
+	while (j >= 0)
+	{
+		free (p[j]);
+		j--;
+	}
+	free(p);
+	return ((void)0);
+}
+
+char	**ft_line_alloc(char **p, int size, char const *s, char c)
 {
     int		i;
     int		j;
@@ -21,78 +52,62 @@ char	**allocate(char **ptr, int count_str, char *str, char c)
 
 	j = 0;
 	i = 0;
-	while (count_str > 0 && str[i])
+	while (size > j && s[i])
 	{
 		len = 0;
-		while (str[i] == c)
+		while (s[i] == c && s[i] != '\0')
 			i++;
-		while (str[i] != c && str[i])
+		while (s[i] != c && s[i] != '\0')
 		{
 			len++;
 			i++;
 		}
-		ptr[j] = (char *)malloc(sizeof(char) * (len + 1));
-		if (!ptr[j])
-		{
-			while (j >= 0)
-			{
-				free (ptr[j]);
-				j--;
-			}
-			return 0;
-		}
-		ft_strlcpy(ptr[j], (char *)(str + i - len), len + 1);
+		p[j] = (char *)malloc(sizeof(char) * (len + 1));
+		if (p[j] == 0)
+			ft_free(p, j);
 		j++;
-		count_str--;
 	}
-	return (ptr);
+	return (p);
+}
+
+char	**ft_str_alloc(char **p, int size, char const *s, char c)
+{
+	int 	i;
+	int 	j;
+	int		str_len;
+
+	i = 0;
+	j = 0;
+	while (size > j && s[i])
+	{
+		str_len = 0;
+		while (s[i] == c && s[i] != '\0')
+			i++;
+		while (s[i] != c && s[i] != '\0')
+		{
+			str_len++;
+			i++;
+		}
+		ft_strlcpy(p[j++], (s + i - str_len), str_len+1);
+	}
+	p[j] = 0;
+	return (p);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	char	**ptr;
-	int		count_str;
 	int		i;
-	char	*str;	
-
-	str = (char *)s;
-	i = 0;
-	count_str = 1;
+    int		j;
+	char	**p;
 
 	if (s == 0)
 		return (0);
-	while (str[i] != '\0')
-	{
-		if (str[i] == c && str[i + 1] != c && str[i + 1] != '\0')
-			count_str++;
-		i++;
-	}
-	if (str[0] == c)
-		count_str--;
-	ptr = (char **)malloc(sizeof(char *) * count_str);
-	if (ptr == 0)
-	{
+	i = 0;
+	j = 0;
+	p = (char **)malloc(sizeof(char *) * (ft_str_size(s,c) + 1));
+	if (p == 0)
 		return (0);
-	}
-	ptr = allocate(ptr, count_str, str, c);
-	return (ptr);
+	ft_line_alloc(p, ft_str_size(s,c), s, c);
+	ft_str_alloc(p, ft_str_size(s,c), s, c);
+	return (p);
 }
-
-
-
-
-/*
-
-Parameters | 
-#1. 분할할 문자열. 
-#2. 구분 문자.
-
-Return value | 분할로 인한 새 문자열 배열. 할당 실패시 NULL.
-
-External functs. | malloc, free
-
-Description | malloc(3)을 할당하고 구분 문자 'c'를 
-사용하여 문자열 's'을 분할하여 얻은 새로운 문자열 배열을 반환. 
-그 배열은 NULL로 끝나야 합니다.
-
-*/

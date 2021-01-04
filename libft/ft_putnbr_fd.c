@@ -6,7 +6,7 @@
 /*   By: sangchpa <sangchpa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/30 15:02:59 by sangchpa          #+#    #+#             */
-/*   Updated: 2021/01/01 08:59:32 by sangchpa         ###   ########.fr       */
+/*   Updated: 2021/01/04 15:05:39 by sangchpa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,10 +38,3 @@ void	ft_putnbr_fd(int n, int fd)
 		write(fd, &c, 1);
 	}
 }
-
-/*
-Parameters | #1. 출력할 정수. #2. 쓰여질 파일디스크립터.
-Return value | None
-External functs. | write
-Description | 정수 'n'을 주어진 파일디스크립터로 출력.
-*/

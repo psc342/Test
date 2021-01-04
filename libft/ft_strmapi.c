@@ -6,7 +6,7 @@
 /*   By: sangchpa <sangchpa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/30 15:03:33 by sangchpa          #+#    #+#             */
-/*   Updated: 2021/01/01 11:09:18 by sangchpa         ###   ########.fr       */
+/*   Updated: 2021/01/04 11:40:54 by sangchpa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	p[i] = 0;
 	return (p);
 }
-/*
-Parameters | 
-#1. 반복할 문자열. 
-#2. 각 문자에 적용할 함수.
-Return value | 'f'함수를 연속적으로 적용시킨 문자열.  할당 실패시 NULL.
-External functs. | malloc
-Description | 문자열 's'의 각 문자에 'f'함수를 연속적으로 적용시킨 새로운 문자열을
- 만들기. 새로운 문자열은 malloc(3)을 할당.
-*/

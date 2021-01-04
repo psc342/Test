@@ -6,7 +6,7 @@
 /*   By: sangchpa <sangchpa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/30 15:03:25 by sangchpa          #+#    #+#             */
-/*   Updated: 2021/01/01 11:07:50 by sangchpa         ###   ########.fr       */
+/*   Updated: 2021/01/04 11:40:54 by sangchpa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,18 @@
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
+	size_t	len;
 
-	if (!dst && !src)
+	if (dst == 0 && src == 0)
 		return (0);
 	i = 0;
-	while (src[i] && i + 1 < dstsize)
+	len = ft_strlen(src);
+	while (i < len && i + 1 < dstsize)
 	{
 		dst[i] = src[i];
 		i++;
 	}
-	if (dstsize != 0)
+	if (i < dstsize)
 		dst[i] = 0;
-	while (src[i])
-		i++;
-	return (i);
+	return (len);
 }

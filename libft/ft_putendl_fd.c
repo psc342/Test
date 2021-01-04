@@ -6,7 +6,7 @@
 /*   By: sangchpa <sangchpa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/30 15:02:55 by sangchpa          #+#    #+#             */
-/*   Updated: 2021/01/01 08:58:52 by sangchpa         ###   ########.fr       */
+/*   Updated: 2021/01/04 15:05:29 by sangchpa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,3 @@ void	ft_putendl_fd(char *s, int fd)
 	write(fd, "\n", 1);
 }
 
-/*
-Parameters |
-#1. 출력할 문자열. 
-#2. 쓰여질 파일디스크립터
-
-Return value | None
-External functs. | write
-Description | 문자열 's'을 주어진 파일디스크립터로 출력하고 newline으로 끝내기.
-*/

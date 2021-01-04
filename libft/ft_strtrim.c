@@ -6,52 +6,40 @@
 /*   By: sangchpa <sangchpa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/30 15:03:47 by sangchpa          #+#    #+#             */
-/*   Updated: 2021/01/01 11:12:49 by sangchpa         ###   ########.fr       */
+/*   Updated: 2021/01/04 15:07:35 by sangchpa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s1, char const *set)
+int	match_test(char const c, char const *set)
 {
-	char	*p;
 	int		i;
-	int		j;
-	int		k;
-	int		count;
 
 	i = 0;
-	k = 0;
-	p = (char *)malloc(sizeof(char) * (ft_strlen(s1) + 1));
-	if (p == 0)
-		return (0);
-	while(s1[i] != '\0')
+	while (set[i])
 	{
-		j = 0;
-		count = 0;
-		while (set[j] != '\0')
-		{
-			if(s1[i] == set[j])
-				count++;
-			j++;
-		}
-		if (count == 0)
-		{
-			p[k] = s1[i]; 
-			k++;
-		}
-		i++;
+		if (c == set[i++])
+			return (1);
 	}
-	return (p);
+	return (0);
 }
 
+char	*ft_strtrim(char const *s1, char const *set)
+{
+	int		len;
+	char	*p;
 
-/*
-Parameters | 
-#1. 제거될 문자열. 
-#2. 제거할 참조 문자 집합.
-Return value | 문자가 제거된 문자열. 할당 실패시 NULL.
-External functs. | malloc
-Description | malloc(3)을 할당하고 문자열의 처음과 끝에서
- 'set'에 지정된 문자가 제거된 문자열 's1'의 사본을 반환.
-*/
+	if (s1 == 0)
+		return(0);
+	while (match_test(*s1, set))
+		s1++;
+	len = ft_strlen((char*)s1) - 1;
+	while (len >= 0 && match_test(s1[len], set))
+		len--;
+	p = (char *)malloc(sizeof(char) * (len + 2));
+	if (p == 0)
+		return (0);
+	ft_strlcpy(p, (char *)s1, (len + 2));
+	return (p);
+}
