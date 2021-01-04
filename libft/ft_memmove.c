@@ -6,7 +6,7 @@
 /*   By: sangchpa <sangchpa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/30 15:02:42 by sangchpa          #+#    #+#             */
-/*   Updated: 2021/01/04 09:59:08 by sangchpa         ###   ########.fr       */
+/*   Updated: 2021/01/04 15:44:07 by sangchpa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,24 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	unsigned char		*new_dest;
-	unsigned char		*new_src;
+	unsigned char	*dst_cp;
+	unsigned char	*src_cp;
 
-	if (dst == src || len == 0)
-		return (dst);
+	dst_cp = (unsigned char *)dst;
+	src_cp = (unsigned char *)src;
+	if (dst == 0 && src == 0)
+		return (0);
 	if (dst < src)
 	{
-		new_dest = (unsigned char *)dst;
-		new_src = (unsigned char *)src;
-		while (len--)
-			*new_dest++ = *new_src++;
+		while (len-- > 0)
+			*dst_cp++ = *src_cp++;
 	}
 	else
 	{
-		new_dest = (unsigned char *)dst + (len - 1);
-		new_src = (unsigned char *)src + (len - 1);
-		while (len--)
-			*new_dest-- = *new_src--;
+		dst_cp = dst_cp + len - 1;
+		src_cp = src_cp + len - 1;
+		while (len-- > 0)
+			*dst_cp-- = *src_cp--;
 	}
 	return (dst);
 }
