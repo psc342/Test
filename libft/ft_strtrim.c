@@ -6,7 +6,7 @@
 /*   By: sangchpa <sangchpa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/30 15:03:47 by sangchpa          #+#    #+#             */
-/*   Updated: 2021/01/04 18:13:11 by sangchpa         ###   ########.fr       */
+/*   Updated: 2021/01/06 11:53:05 by sangchpa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ char		*ft_strtrim(char const *s1, char const *set)
 	char	*p;
 
 	if (s1 == 0 || set == 0)
-		return(0);
+		return (0);
 	while (match_test(*s1, set))
 		s1++;
 	len = ft_strlen((char*)s1);

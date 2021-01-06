@@ -6,7 +6,7 @@
 /*   By: sangchpa <sangchpa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/30 15:03:07 by sangchpa          #+#    #+#             */
-/*   Updated: 2021/01/05 12:56:21 by sangchpa         ###   ########.fr       */
+/*   Updated: 2021/01/06 11:53:04 by sangchpa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,7 +97,7 @@ char		**ft_str_alloc(char **p, int size, char const *s, char c)
 char		**ft_split(char const *s, char c)
 {
 	int		i;
-    int		j;
+	int		j;
 	char	**p;
 
 	if (s == 0)

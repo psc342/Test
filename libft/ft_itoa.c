@@ -6,7 +6,7 @@
 /*   By: sangchpa <sangchpa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/30 15:01:40 by sangchpa          #+#    #+#             */
-/*   Updated: 2021/01/06 11:42:32 by sangchpa         ###   ########.fr       */
+/*   Updated: 2021/01/06 11:53:07 by sangchpa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int			number_len(int n)
 {
 	int		len;
-	
+
 	len = 0;
 	if (n == -2147483648)
 		return (11);
@@ -28,7 +28,7 @@ int			number_len(int n)
 		return (1);
 	while (n > 0)
 	{
-		n = n /10;
+		n = n / 10;
 		len++;
 	}
 	return (len);
