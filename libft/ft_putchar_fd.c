@@ -6,7 +6,7 @@
 /*   By: sangchpa <sangchpa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/30 15:02:50 by sangchpa          #+#    #+#             */
-/*   Updated: 2021/01/04 15:05:20 by sangchpa         ###   ########.fr       */
+/*   Updated: 2021/01/04 18:26:11 by sangchpa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putchar_fd(char c, int fd)
 {
-    if	(fd < 0)
+	if (fd < 0)
 		return (void)0;
 	write(fd, &c, 1);
 }

@@ -6,7 +6,7 @@
 /*   By: sangchpa <sangchpa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/30 15:02:17 by sangchpa          #+#    #+#             */
-/*   Updated: 2021/01/04 15:04:16 by sangchpa         ###   ########.fr       */
+/*   Updated: 2021/01/06 11:33:43 by sangchpa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 t_list	*ft_lstnew(void *content)
 {
-    t_list	*p;
+	t_list	*p;
 
 	p = (t_list *)malloc(sizeof(t_list));
 	if (p == 0)

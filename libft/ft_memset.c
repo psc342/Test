@@ -6,7 +6,7 @@
 /*   By: sangchpa <sangchpa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/30 15:02:46 by sangchpa          #+#    #+#             */
-/*   Updated: 2021/01/04 15:05:16 by sangchpa         ###   ########.fr       */
+/*   Updated: 2021/01/04 18:06:42 by sangchpa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,7 @@ void	*ft_memset(void *b, int c, size_t len)
 	unsigned char	c_cp;
 	
 	b_cp = (unsigned char *)b;
-	c_cp = (unsigned char)c;
-    
+	c_cp = (unsigned char)c;    
 	i = 0;
 	while (i < len)
 	{

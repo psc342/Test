@@ -6,13 +6,13 @@
 /*   By: sangchpa <sangchpa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/30 15:03:29 by sangchpa          #+#    #+#             */
-/*   Updated: 2021/01/04 17:37:04 by sangchpa         ###   ########.fr       */
+/*   Updated: 2021/01/04 18:06:41 by sangchpa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen (const char *s)
+size_t	ft_strlen(const char *s)
 {
 	size_t	len;
 

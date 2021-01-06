@@ -6,7 +6,7 @@
 /*   By: sangchpa <sangchpa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/30 15:03:33 by sangchpa          #+#    #+#             */
-/*   Updated: 2021/01/04 11:40:54 by sangchpa         ###   ########.fr       */
+/*   Updated: 2021/01/04 18:13:12 by sangchpa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	if (s == 0 || f == 0)
 		return (0);
 	i = 0;
-	p = (char *)malloc( sizeof(char) * (ft_strlen(s) + 1));
+	p = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
 	if (p == 0)
 		return (0);
 	while (s[i] != '\0')

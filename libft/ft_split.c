@@ -6,13 +6,13 @@
 /*   By: sangchpa <sangchpa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/30 15:03:07 by sangchpa          #+#    #+#             */
-/*   Updated: 2021/01/04 15:06:05 by sangchpa         ###   ########.fr       */
+/*   Updated: 2021/01/05 12:56:21 by sangchpa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_str_size(char const *s, char c)
+int			ft_str_size(char const *s, char c)
 {
 	int		i;
 	int		size;
@@ -33,22 +33,22 @@ int	ft_str_size(char const *s, char c)
 	return (size);
 }
 
-void	ft_free(char **p, int j)
+void		ft_free(char **p, int j)
 {
 	while (j >= 0)
 	{
-		free (p[j]);
+		free(p[j]);
 		j--;
 	}
 	free(p);
-	return ((void)0);
+	return ;
 }
 
-char	**ft_line_alloc(char **p, int size, char const *s, char c)
+char		**ft_line_alloc(char **p, int size, char const *s, char c)
 {
-    int		i;
-    int		j;
-    int		len;
+	int		i;
+	int		j;
+	int		len;
 
 	j = 0;
 	i = 0;
@@ -70,10 +70,10 @@ char	**ft_line_alloc(char **p, int size, char const *s, char c)
 	return (p);
 }
 
-char	**ft_str_alloc(char **p, int size, char const *s, char c)
+char		**ft_str_alloc(char **p, int size, char const *s, char c)
 {
-	int 	i;
-	int 	j;
+	int		i;
+	int		j;
 	int		str_len;
 
 	i = 0;
@@ -88,13 +88,13 @@ char	**ft_str_alloc(char **p, int size, char const *s, char c)
 			str_len++;
 			i++;
 		}
-		ft_strlcpy(p[j++], (s + i - str_len), str_len+1);
+		ft_strlcpy(p[j++], (s + i - str_len), str_len + 1);
 	}
 	p[j] = 0;
 	return (p);
 }
 
-char	**ft_split(char const *s, char c)
+char		**ft_split(char const *s, char c)
 {
 	int		i;
     int		j;
@@ -104,10 +104,10 @@ char	**ft_split(char const *s, char c)
 		return (0);
 	i = 0;
 	j = 0;
-	p = (char **)malloc(sizeof(char *) * (ft_str_size(s,c) + 1));
+	p = (char **)malloc(sizeof(char *) * (ft_str_size(s, c) + 1));
 	if (p == 0)
 		return (0);
-	ft_line_alloc(p, ft_str_size(s,c), s, c);
-	ft_str_alloc(p, ft_str_size(s,c), s, c);
+	ft_line_alloc(p, ft_str_size(s, c), s, c);
+	ft_str_alloc(p, ft_str_size(s, c), s, c);
 	return (p);
 }

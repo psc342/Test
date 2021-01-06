@@ -6,7 +6,7 @@
 /*   By: sangchpa <sangchpa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/30 14:46:57 by sangchpa          #+#    #+#             */
-/*   Updated: 2021/01/04 09:59:10 by sangchpa         ###   ########.fr       */
+/*   Updated: 2021/01/06 10:53:10 by sangchpa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_atoi(const char *str)
 {
 	int	i;
 	int	state;
-	int	val;
+	long	val;
 
 	i = 0;
 	state = 1;
@@ -32,6 +32,10 @@ int	ft_atoi(const char *str)
 	while ((str[i] != '\0') && ('0' <= str[i] && '9' >= str[i]))
 	{
 		val = (val * 10) + (str[i] - '0');
+		if (val > 2147483647 && state == 1)
+			return (-1);
+		if (val > 2147483648 && state == -1)
+			return (0);
 		i++;
 	}
 	return (state * val);

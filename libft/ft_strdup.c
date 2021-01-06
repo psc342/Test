@@ -6,14 +6,14 @@
 /*   By: sangchpa <sangchpa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/30 15:03:14 by sangchpa          #+#    #+#             */
-/*   Updated: 2021/01/04 15:06:14 by sangchpa         ###   ########.fr       */
+/*   Updated: 2021/01/04 18:06:41 by sangchpa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
- char	*ft_strdup(const char *s1)
- {
+char	*ft_strdup(const char *s1)
+{
 	int		i;
 	int		s1_len;
 	char	*p;
@@ -30,5 +30,5 @@
 	}
 	p[i] = '\0';
 	return(p);
- }
+}
  

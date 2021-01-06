@@ -6,15 +6,15 @@
 /*   By: sangchpa <sangchpa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/30 15:03:47 by sangchpa          #+#    #+#             */
-/*   Updated: 2021/01/04 17:37:24 by sangchpa         ###   ########.fr       */
+/*   Updated: 2021/01/04 18:13:11 by sangchpa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	match_test(char const c, char const *set)
+int			match_test(char const c, char const *set)
 {
-	int	i;
+	int		i;
 
 	i = 0;
 	while (set[i])
@@ -25,7 +25,7 @@ int	match_test(char const c, char const *set)
 	return (0);
 }
 
-char	*ft_strtrim(char const *s1, char const *set)
+char		*ft_strtrim(char const *s1, char const *set)
 {
 	int		len;
 	char	*p;

@@ -6,7 +6,7 @@
 /*   By: sangchpa <sangchpa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/30 15:03:18 by sangchpa          #+#    #+#             */
-/*   Updated: 2021/01/04 15:08:38 by sangchpa         ###   ########.fr       */
+/*   Updated: 2021/01/04 18:15:13 by sangchpa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-    char	*p;
-    int		s1_len;
-    int		s2_len;
+	char	*p;
+	int		s1_len;
+	int		s2_len;
 
 	if (s1 == 0 || s2 == 0)
-		return(0);
+		return (0);
 	s1_len = ft_strlen(s1);
 	s2_len = ft_strlen(s2);
 	p = (char *)malloc(sizeof(char) * (s1_len + s2_len + 1));
