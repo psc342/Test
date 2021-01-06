@@ -6,16 +6,16 @@
 /*   By: sangchpa <sangchpa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/30 14:46:57 by sangchpa          #+#    #+#             */
-/*   Updated: 2021/01/06 10:53:10 by sangchpa         ###   ########.fr       */
+/*   Updated: 2021/01/06 11:41:43 by sangchpa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+int			ft_atoi(const char *str)
 {
-	int	i;
-	int	state;
+	int		i;
+	int		state;
 	long	val;
 
 	i = 0;
