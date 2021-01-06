@@ -6,7 +6,7 @@
 /*   By: sangchpa <sangchpa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/30 14:43:28 by sangchpa          #+#    #+#             */
-/*   Updated: 2021/01/06 11:53:09 by sangchpa         ###   ########.fr       */
+/*   Updated: 2021/01/06 19:52:27 by sangchpa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_bzero(void *s, size_t n)
 {
 	size_t	i;
-	
+
 	i = 0;
 	while (i < n)
 	{

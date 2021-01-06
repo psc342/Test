@@ -6,7 +6,7 @@
 /*   By: sangchpa <sangchpa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/30 15:02:29 by sangchpa          #+#    #+#             */
-/*   Updated: 2021/01/06 11:53:08 by sangchpa         ###   ########.fr       */
+/*   Updated: 2021/01/06 19:52:27 by sangchpa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	size_t	i;
-	
+
 	i = 0;
 	while (i < n)
 	{
