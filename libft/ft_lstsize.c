@@ -6,7 +6,7 @@
 /*   By: sangchpa <sangchpa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/30 15:02:21 by sangchpa          #+#    #+#             */
-/*   Updated: 2021/01/04 15:04:14 by sangchpa         ###   ########.fr       */
+/*   Updated: 2021/01/06 18:55:55 by sangchpa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_lstsize(t_list *lst)
 	int	size;
 
 	size = 0;
-	while (lst != NULL)
+	while (lst != 0)
 	{
 		lst = lst->next;
 		size++;

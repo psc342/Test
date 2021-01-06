@@ -6,13 +6,13 @@
 /*   By: sangchpa <sangchpa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/30 15:03:07 by sangchpa          #+#    #+#             */
-/*   Updated: 2021/01/06 11:53:04 by sangchpa         ###   ########.fr       */
+/*   Updated: 2021/01/06 14:53:14 by sangchpa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int			ft_str_size(char const *s, char c)
+static int			ft_str_size(char const *s, char c)
 {
 	int		i;
 	int		size;
@@ -33,7 +33,7 @@ int			ft_str_size(char const *s, char c)
 	return (size);
 }
 
-void		ft_free(char **p, int j)
+static void		ft_free(char **p, int j)
 {
 	while (j >= 0)
 	{
@@ -44,7 +44,7 @@ void		ft_free(char **p, int j)
 	return ;
 }
 
-char		**ft_line_alloc(char **p, int size, char const *s, char c)
+static char		**ft_line_alloc(char **p, int size, char const *s, char c)
 {
 	int		i;
 	int		j;
@@ -70,7 +70,7 @@ char		**ft_line_alloc(char **p, int size, char const *s, char c)
 	return (p);
 }
 
-char		**ft_str_alloc(char **p, int size, char const *s, char c)
+static char		**ft_str_alloc(char **p, int size, char const *s, char c)
 {
 	int		i;
 	int		j;

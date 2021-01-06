@@ -6,13 +6,13 @@
 /*   By: sangchpa <sangchpa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/30 15:01:40 by sangchpa          #+#    #+#             */
-/*   Updated: 2021/01/06 11:53:07 by sangchpa         ###   ########.fr       */
+/*   Updated: 2021/01/06 14:52:19 by sangchpa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int			number_len(int n)
+static int			number_len(int n)
 {
 	int		len;
 

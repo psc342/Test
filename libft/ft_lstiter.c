@@ -6,7 +6,7 @@
 /*   By: sangchpa <sangchpa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/30 15:02:00 by sangchpa          #+#    #+#             */
-/*   Updated: 2021/01/04 15:04:17 by sangchpa         ###   ########.fr       */
+/*   Updated: 2021/01/06 19:00:48 by sangchpa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	if (lst == NULL || f == NULL)
+	if (lst == 0 || f == 0)
 		return ;
 	while (lst)
 	{

@@ -6,7 +6,7 @@
 /*   By: sangchpa <sangchpa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/30 15:01:56 by sangchpa          #+#    #+#             */
-/*   Updated: 2021/01/04 15:04:17 by sangchpa         ###   ########.fr       */
+/*   Updated: 2021/01/06 18:55:57 by sangchpa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	if (lst == NULL || del == NULL)
+	if (lst == 0 || del == 0)
 		return ;
 	del(lst->content);
 	free(lst);

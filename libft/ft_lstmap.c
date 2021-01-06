@@ -6,7 +6,7 @@
 /*   By: sangchpa <sangchpa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/30 15:02:12 by sangchpa          #+#    #+#             */
-/*   Updated: 2021/01/04 15:04:16 by sangchpa         ###   ########.fr       */
+/*   Updated: 2021/01/06 19:44:36 by sangchpa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,22 @@
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*result;
+	t_list	*list;
 	t_list	*temp;
 
-	if (lst == NULL || f == NULL)
-		return (NULL);
-	result = NULL;
+	if (lst == 0 || f == 0)
+		return (0);
+	list = 0;
 	while (lst)
 	{
 		temp = ft_lstnew((*f)(lst->content));
 		if (!temp)
 		{
-			ft_lstclear(&result, del);
-			return (NULL);
+			ft_lstclear(&list, del);
+			return (0);
 		}
-		ft_lstadd_back(&result, temp);
-		temp = temp->next;
+		ft_lstadd_back(&list, temp);
 		lst = lst->next;
 	}
-	return (result);
+	return (list);
 }

@@ -6,7 +6,7 @@
 /*   By: sangchpa <sangchpa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/30 15:03:52 by sangchpa          #+#    #+#             */
-/*   Updated: 2021/01/04 18:13:11 by sangchpa         ###   ########.fr       */
+/*   Updated: 2021/01/06 19:44:46 by sangchpa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	if (s == 0)
 		return (0);
-	if (len == 0 || ft_strlen(s) <= start)
+	if (len == 0 || (unsigned int)ft_strlen(s) <= start)
 		return (ft_strdup(""));
 	p = (char *)malloc(sizeof(char) * (len + 1));
 	if (p == 0)

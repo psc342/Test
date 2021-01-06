@@ -6,7 +6,7 @@
 /*   By: sangchpa <sangchpa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/30 15:01:44 by sangchpa          #+#    #+#             */
-/*   Updated: 2021/01/04 15:04:19 by sangchpa         ###   ########.fr       */
+/*   Updated: 2021/01/06 18:55:58 by sangchpa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*last;
 
-	if (lst == NULL || new == NULL)
+	if (lst == 0 || new == 0)
 		return ;
-	if (*lst == NULL)
+	if (*lst == 0)
 	{
 		*lst = new;
 		return ;

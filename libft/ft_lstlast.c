@@ -6,7 +6,7 @@
 /*   By: sangchpa <sangchpa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/30 15:02:08 by sangchpa          #+#    #+#             */
-/*   Updated: 2021/01/04 15:04:17 by sangchpa         ###   ########.fr       */
+/*   Updated: 2021/01/06 18:55:59 by sangchpa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	if (lst == NULL)
-		return (NULL);
-	while (lst->next != NULL)
+	if (lst == 0)
+		return (0);
+	while (lst->next != 0)
 		lst = lst->next;
 	return (lst);
 }
