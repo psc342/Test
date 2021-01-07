@@ -6,13 +6,13 @@
 /*   By: sangchpa <sangchpa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/30 15:03:07 by sangchpa          #+#    #+#             */
-/*   Updated: 2021/01/06 14:53:14 by sangchpa         ###   ########.fr       */
+/*   Updated: 2021/01/07 13:16:17 by sangchpa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int			ft_str_size(char const *s, char c)
+static int		ft_str_size(char const *s, char c)
 {
 	int		i;
 	int		size;
@@ -94,7 +94,7 @@ static char		**ft_str_alloc(char **p, int size, char const *s, char c)
 	return (p);
 }
 
-char		**ft_split(char const *s, char c)
+char			**ft_split(char const *s, char c)
 {
 	int		i;
 	int		j;
